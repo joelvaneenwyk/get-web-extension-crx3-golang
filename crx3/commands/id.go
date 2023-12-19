@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/mediabuyerbot/go-crx3"
+	"github.com/joelvaneenwyk/get-web-extension-crx3-golang"
 	"github.com/spf13/cobra"
 )
 

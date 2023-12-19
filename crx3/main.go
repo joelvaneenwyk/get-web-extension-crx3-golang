@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/mediabuyerbot/go-crx3/crx3/commands"
+	"github.com/joelvaneenwyk/get-web-extension-crx3-golang/crx3/commands"
 )
 
 func main() {

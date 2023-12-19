@@ -1,4 +1,4 @@
-module github.com/mediabuyerbot/go-crx3
+module github.com/joelvaneenwyk/get-web-extension-crx3-golang
 
 go 1.21
 
