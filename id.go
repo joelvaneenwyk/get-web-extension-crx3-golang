@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/joelvaneenwyk/get-web-extension-crx3-golang/pb"
+	"github.com/joelvaneenwyk/go-web-extensions/pb"
 
 	"google.golang.org/protobuf/proto"
 )

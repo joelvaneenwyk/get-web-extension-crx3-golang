@@ -1,10 +1,10 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="go test" type="GoTestRunConfiguration" factoryName="Go Test">
-    <module name="get-web-extension-crx3-golang" />
+    <module name="go-web-extensions" />
     <working_directory value="$PROJECT_DIR$" />
     <go_parameters value="-v" />
     <kind value="DIRECTORY" />
-    <package value="github.com/joelvaneenwyk/get-web-extension-crx3-golang" />
+    <package value="github.com/joelvaneenwyk/go-web-extensions" />
     <directory value="$PROJECT_DIR$" />
     <filePath value="$PROJECT_DIR$" />
     <framework value="gotest" />

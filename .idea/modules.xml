@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/get-web-extension-crx3-golang.iml" filepath="$PROJECT_DIR$/.idea/get-web-extension-crx3-golang.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/go-web-extensions.iml" filepath="$PROJECT_DIR$/.idea/go-web-extensions.iml" />
     </modules>
   </component>
 </project>

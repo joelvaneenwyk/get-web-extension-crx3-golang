@@ -1,4 +1,4 @@
-module github.com/joelvaneenwyk/get-web-extension-crx3-golang
+module github.com/joelvaneenwyk/go-web-extensions
 
 go 1.21
 

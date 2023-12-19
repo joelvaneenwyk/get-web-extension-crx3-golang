@@ -3,8 +3,8 @@
 <!-- cspell:ignore blipmdconlkpinefehnmjammfjpmpbjk dgmchnekcpklnjppdmmjlgpmpohmpmgp Println -->
 
 [![Coverage Status](https://coveralls.io/repos/github/mmadfox/go-crx3/badge.svg?branch=master)](https://coveralls.io/github/mmadfox/go-crx3?branch=master)
-[![Documentation](https://godoc.org/github.com/joelvaneenwyk/get-web-extension-crx3-golang?status.svg)](https://pkg.go.dev/github.com/joelvaneenwyk/get-web-extension-crx3-golang)
-[![Go Report Card](https://goreportcard.com/badge/github.com/joelvaneenwyk/get-web-extension-crx3-golang)](https://goreportcard.com/report/github.com/joelvaneenwyk/get-web-extension-crx3-golang)
+[![Documentation](https://godoc.org/github.com/joelvaneenwyk/go-web-extensions?status.svg)](https://pkg.go.dev/github.com/joelvaneenwyk/go-web-extensions)
+[![Go Report Card](https://goreportcard.com/badge/github.com/joelvaneenwyk/go-web-extensions)](https://goreportcard.com/report/github.com/joelvaneenwyk/go-web-extensions)
 ![Actions](https://github.com/mmadfox/go-crx3/actions/workflows/cover.yml/badge.svg)
 
 Provides a sets of tools packing, unpacking, zip, unzip, download, gen id, etc...
@@ -38,8 +38,8 @@ Provides a sets of tools packing, unpacking, zip, unzip, download, gen id, etc..
 ### Installation
 
 ```ssh
-go get -u github.com/joelvaneenwyk/get-web-extension-crx3-golang/crx3
-go install github.com/joelvaneenwyk/get-web-extension-crx3-golang/crx3@latest
+go get -u github.com/joelvaneenwyk/go-web-extensions/crx3
+go install github.com/joelvaneenwyk/go-web-extensions/crx3@latest
 ```
 
 OR download the binary from here
@@ -62,7 +62,7 @@ make test/cover
 ##### Pack a zip file or unzipped directory into a crx extension
 
 ```go
-import crx3 "github.com/joelvaneenwyk/get-web-extension-crx3-golang"
+import crx3 "github.com/joelvaneenwyk/go-web-extensions"
 
 if err := crx3.Extension("/path/to/file.zip").Pack(nil); err != nil {
     panic(err)
@@ -70,7 +70,7 @@ if err := crx3.Extension("/path/to/file.zip").Pack(nil); err != nil {
 ```
 
 ```go
-import crx3 "github.com/joelvaneenwyk/get-web-extension-crx3-golang"
+import crx3 "github.com/joelvaneenwyk/go-web-extensions"
 
 pk, err := crx3.LoadPrivateKey("/path/to/key.pem")
 if err != nil {
@@ -82,7 +82,7 @@ if err := crx3.Extension("/path/to/file.zip").Pack(pk); err != nil {
 ```
 
 ```go
-import crx3 "github.com/joelvaneenwyk/get-web-extension-crx3-golang"
+import crx3 "github.com/joelvaneenwyk/go-web-extensions"
 
 pk, err := crx3.LoadPrivateKey("/path/to/key.pem")
 if err != nil {
@@ -104,7 +104,7 @@ crx3 pack /path/to/file.zip -p /path/to/key.pem -o /path/to/ext.crx
 ##### Unpack chrome extension into current directory
 
 ```go
-import crx3 "github.com/joelvaneenwyk/get-web-extension-crx3-golang"
+import crx3 "github.com/joelvaneenwyk/go-web-extensions"
 
 if err := crx3.Extension("/path/to/ext.crx").Unpack(); err != nil {
    panic(err)
@@ -120,7 +120,7 @@ crx3 unpack /path/to/ext.crx
 ##### Encode an extension file to a base64 string
 
 ```go
-import crx3 "github.com/joelvaneenwyk/get-web-extension-crx3-golang"
+import crx3 "github.com/joelvaneenwyk/go-web-extensions"
 import "fmt"
 
 b, err := crx3.Extension("/path/to/ext.crx").Base64()
@@ -139,7 +139,7 @@ crx3 base64 /path/to/ext.crx [-o /path/to/file]
 ##### Download a chrome extension from the web store
 
 ```go
-import crx3 "github.com/joelvaneenwyk/get-web-extension-crx3-golang"
+import crx3 "github.com/joelvaneenwyk/go-web-extensions"
 
 extensionID := "blipmdconlkpinefehnmjammfjpmpbjk"
 filepath := "/path/to/ext.crx"
@@ -158,7 +158,7 @@ crx3 download https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpi
 ##### Zip add an unpacked extension to the archive
 
 ```go
-import crx3 "github.com/joelvaneenwyk/get-web-extension-crx3-golang"
+import crx3 "github.com/joelvaneenwyk/go-web-extensions"
 
 if err := crx3.Extension("/path/to/unpacked").Zip(); err != nil {
     panic(err)
@@ -174,7 +174,7 @@ crx3 zip /path/to/unpacked [-o /custom/path]
 ##### Unzip an extension to the current directory
 
 ```go
-import crx3 "github.com/joelvaneenwyk/get-web-extension-crx3-golang"
+import crx3 "github.com/joelvaneenwyk/go-web-extensions"
 
 if err := crx3.Extension("/path/to/ext.zip").Unzip(); err != nil {
     panic(err)
@@ -190,7 +190,7 @@ crx3 unzip /path/to/ext.zip [-o /custom/path]
 ##### Generate extension id (like dgmchnekcpklnjppdmmjlgpmpohmpmgp)
 
 ```go
-import crx3 "github.com/joelvaneenwyk/get-web-extension-crx3-golang"
+import crx3 "github.com/joelvaneenwyk/go-web-extensions"
 
 id, err := crx3.Extension("/path/to/ext.crx").ID()
 if err != nil {
@@ -205,7 +205,7 @@ crx3 id /path/to/ext.crx
 #### IsDir, IsZip, IsCRX3
 
 ```go
-import crx3 "github.com/joelvaneenwyk/get-web-extension-crx3-golang"
+import crx3 "github.com/joelvaneenwyk/go-web-extensions"
 
 crx3.Extension("/path/to/ext.zip").IsZip()
 crx3.Extension("/path/to/ext").IsDir()
@@ -215,7 +215,7 @@ crx3.Extension("/path/to/ext.crx").IsCRX3()
 #### NewPrivateKey, LoadPrivateKey, SavePrivateKey
 
 ```go
-import crx3 "github.com/joelvaneenwyk/get-web-extension-crx3-golang"
+import crx3 "github.com/joelvaneenwyk/go-web-extensions"
 
 pk, err := crx3.NewPrivateKey()
 if err != nil {
@@ -235,4 +235,4 @@ crx3 keygen /path/to/key.pem
 
 ## License
 
-go-crx3 is released under the Apache 2.0 license. See [LICENSE.txt](https://github.com/joelvaneenwyk/get-web-extension-crx3-golang/blob/master/LICENSE)
+go-crx3 is released under the Apache 2.0 license. See [LICENSE.txt](https://github.com/joelvaneenwyk/go-web-extensions/blob/master/LICENSE)

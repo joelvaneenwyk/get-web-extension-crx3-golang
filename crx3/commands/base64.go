@@ -7,7 +7,7 @@ import (
 	"io"
 	"os"
 
-	crx3 "github.com/joelvaneenwyk/get-web-extension-crx3-golang"
+	crx3 "github.com/joelvaneenwyk/go-web-extensions"
 	"github.com/spf13/cobra"
 )
 
