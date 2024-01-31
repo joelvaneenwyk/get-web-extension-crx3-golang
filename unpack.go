@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/mediabuyerbot/go-crx3/pb"
+	"github.com/joelvaneenwyk/go-web-extensions/pb"
 
 	"google.golang.org/protobuf/proto"
 )

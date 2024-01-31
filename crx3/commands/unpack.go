@@ -3,7 +3,7 @@ package commands
 import (
 	"errors"
 
-	crx3 "github.com/mediabuyerbot/go-crx3"
+	crx3 "github.com/joelvaneenwyk/go-web-extensions"
 	"github.com/spf13/cobra"
 )
 

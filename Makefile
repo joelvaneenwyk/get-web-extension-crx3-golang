@@ -13,7 +13,7 @@ coveralls: deps
 	goveralls -coverprofile=coverage.out -reponame=go-webdriver -repotoken=${COVERALLS_GO_CRX3_TOKEN} -service=local
 
 docker-protoc:
-	@docker build -t github.com/mediabuyerbot/go-crx3/protoc:latest -f   \
+	@docker build -t github.com/joelvaneenwyk/go-web-extensions/protoc:latest -f   \
            ./docker/protoc.dockerfile .
 
 proto: docker-protoc
